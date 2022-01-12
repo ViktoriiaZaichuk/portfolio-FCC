@@ -1,0 +1,36 @@
+/* HEADER */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    nav {
+        padding: .5rem 0;
+        font-weight: 500;
+        & a {
+            display: block;
+            position: relative;
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            text-shadow: -1px -1px 1px white;
+            @include screen768 {
+                font-size: 1.3rem;
+                font-weight: 400;
+            } 
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                height: 2rem;
+                width: 0rem;
+                background-color: $red;
+                z-index: -1; 
+                transition:  0.3s ease; 
+                transform-origin: right;
+            }
+            &:hover::after {
+                width: 70%;
+            }
+        }
+    } 
+}

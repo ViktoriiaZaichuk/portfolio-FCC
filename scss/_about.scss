@@ -1,0 +1,87 @@
+.about-wrapper {
+    min-height: 100vh;
+    & .about-content {
+        width: 98%;
+        margin-left: 2%;
+        overflow: hidden;
+        position: relative;
+    }
+    & .about-border {
+        width: 2%;
+        background-color: $black;
+        z-index: 2;
+    }
+    & h4 {
+        font-size: 9rem;
+        font-weight: 400;
+        position: absolute;
+        @include screen1300 {
+            font-size: 7rem;
+        }
+        @include screen1024 {
+            font-size: 5rem;
+        }
+        @include screen768 {
+            font-size: 3rem;
+        }
+        @include screen500 {
+            font-size: 2.5rem;
+        }
+    }
+
+    & h3 {
+        height: 40vh;
+        font-weight: 300;
+        font-size: 5rem;
+        @include screen1024 {
+            font-size: 4rem;
+        }
+        @include screen768 {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+.about-grtng {
+    min-height: 40vh;
+    @include screen768 {
+        min-height: 30vh; 
+    }
+    & .about-hey {
+        position: relative;
+        font-size: 4rem;
+        transform: scale(.7);
+        margin: 10rem 0 0 5rem;
+        width: 20rem;
+        height: 20rem;
+        padding: 10rem;
+        text-align: center;
+        border: solid .2rem $red;
+        border-radius: 10rem;
+        opacity: 0;
+        & img {
+            display: block;
+            position: absolute;
+            top: 2%;
+            left: 10%;
+            z-index: -1;
+        }
+    }
+}
+
+
+.about-txt {
+    min-height: 50vh; 
+    @include screen768 {
+        min-height: 20vh; 
+    }
+    & .about-web {
+        right: 5%;
+        top: 0%;
+    }
+    & .about-toulouse {
+        right: 5%;
+        top: 19%;
+    }
+}

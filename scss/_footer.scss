@@ -1,0 +1,208 @@
+/* FOOTER */
+
+.footer {
+    color: white;
+    position: relative;
+    overflow: hidden;
+    @include screen900 {
+        width: 100vw;
+        margin: 0 auto;
+        background-color: $black;
+    }
+    & .footer-black {
+        background-color: $black;
+        width: 70%;
+         @include screen900 {
+            width: 100%;
+            margin: 0 auto;
+        } 
+        & .legal {
+            display: none;
+            @include screen900 {
+                display: block;
+                font-size: 1.2rem;
+                padding-right: 2.5rem;
+            }
+            @include screen768 {
+                display: none;
+            }
+        }
+    }
+    & .footer-go-up {
+        width: 30%;
+        @include screen900 {
+            display: none;
+        }
+        & img {
+            display: block;
+            padding: 5rem;
+            margin: 0 auto;
+        }
+        & .legal {
+            padding: 1rem;
+            color: $black;
+            font-weight: 1.4rem;
+            border-top: solid .1rem $black;
+            text-align: right;
+        }
+    }
+    & a {
+        display: block;
+        color: white;
+    }
+    & svg {
+        @include screen900 {
+            height: 12rem;
+        }
+    }
+    & .foot-up-hidden {
+        display: none;
+        & svg {
+            height: 7rem;
+        }
+        @include screen900 {
+            display: block;
+        }
+    }
+}
+
+
+.footer-contact {
+    padding: 5rem;
+    @include screen768 {
+        padding: 5rem 2rem;
+        flex-direction: column;
+    }
+    & .footer-email {
+        padding: 0 2rem 0 4rem;
+        @include screen768 {
+            padding: 3rem 2rem;
+            align-self: flex-start;
+        }
+        .foot-arrow-r {
+            animation: arrow-red .9s ease-out alternate infinite;
+        }
+    }
+    & p {
+        padding-right: 3rem;
+    }
+    & a {
+        font-size: 2.5rem;
+        padding: 1rem 0;
+        @include screen768 {
+            font-size: 2rem;
+        }
+    }
+    & .footer-c-svg {
+        @include screen768 {
+            align-self: flex-end;
+        }
+    }
+    & .footer-colab {
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 400;
+        border: solid .1rem $red;
+        margin: 1rem 0;
+        border-radius: 70%;
+        height: 5rem;
+        width: 17rem;
+    }
+}
+
+@keyframes arrow-red {
+    0% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(1rem);
+    }
+}
+
+
+.social {
+    border-top: solid .1rem $grey;
+    @include screen768 {
+        justify-content: center;
+    }
+    & ul {
+        padding-left: 5rem;
+        @include screen900 {
+            padding-left: 0;
+        }
+        @include screen768 {
+            justify-content: center;
+        }
+    }
+    & li {
+        padding: 1rem 2.5rem;
+        @include screen500 {
+            padding: 1rem;
+        }
+        & a {
+            text-transform: uppercase;
+            font-weight: 300;
+            transition: .3s;
+            &:hover {
+                color: $red;
+            }
+            @include screen900 {
+                font-size: 1.4rem;
+            }
+            @include screen768 {
+                font-size: 1.2rem;
+            }
+
+        }
+    }
+
+}
+
+button {
+    color: white;
+    font-family: $fontBodyText;
+    font-size: 1.6rem;
+    display: block;
+    background-color: transparent;
+    font-weight: 400;
+    cursor: pointer;
+    border: solid .1rem $red;
+    margin: 1rem 0;
+    border-radius: 70%;
+    height: 5rem;
+    width: 17rem;
+} 
+
+
+#footer-lets-work-txt {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: footer-txt-work 1s linear infinite alternate;
+}
+
+.footer-contact svg:hover #footer-lets-work-txt{
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: footer-txt-work-fast 1s linear alternate-reverse;
+}
+
+@keyframes footer-txt-work {
+    0% { 
+        transform:rotate(-10deg); 
+    }
+    100% { 
+        transform:rotate(10deg); 
+    }
+}
+
+@keyframes footer-txt-work-fast {
+    0% { 
+        transform:rotate(0deg); 
+    }
+    100% { 
+        transform: scale(1.1); 
+    }
+}
+
+
+

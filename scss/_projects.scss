@@ -1,0 +1,235 @@
+/* PROJECTS */
+
+.projects-wrapper {
+    & .projects-content {
+        width: 98%;
+        overflow: hidden;
+    }
+    & .projects-border {
+        width: 2%;
+        background-color: $red;
+        z-index: 2;
+    }
+}
+
+
+.projects-title {
+    position: relative;
+    padding: 12rem 0;
+    & h3 {
+        font-family: $displayFont;
+        font-size: 9rem;
+        font-weight: 400;
+        padding-left: 8rem;
+        @include screen768 {
+            font-size: 5.5rem;
+        }
+        @include screen500 {
+            font-size: 4rem;
+            padding-left: 5rem;
+        }
+    }
+    & .projects-star {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        @include screen500 {
+            left: -18%;
+        }
+        & svg {
+            transform-origin: center;
+            animation: projects-star 15s linear infinite alternate;
+        }
+    }
+}
+
+@keyframes projects-star {
+    0% { 
+        transform:rotate(0deg); 
+    }
+    100% { 
+        transform:rotate(360deg); 
+    }
+} 
+
+
+.projects-arrows {
+    position: relative;
+    padding: 15rem 0;
+    & .arrow-star {
+        position: absolute;
+    }
+}
+
+
+/* WORK */
+.work-exmpl {
+    margin: 25rem 0;
+    @include screen1300 {
+        flex-direction: column;
+        margin: 10rem 0;
+    }
+    
+}
+
+.work-img {
+    width: 50%;
+    padding: 5rem 0;
+    overflow: hidden;
+    @include screen1300 {
+        width: 100%;
+    }
+    & img {
+        display: block;
+        max-height: 335px;
+        @include screen768 {
+            max-height: 250px;
+        }
+        @include screen500 {
+            max-height: 220px;
+        }
+    }
+}
+
+
+.work-txt {
+    width: 50%;
+    align-items: flex-start;
+    padding-left: 5rem;
+    @include screen1300 {
+        width: 100%;
+    }
+    & h2 {
+        text-transform: uppercase;
+        font-family: $displayFont;
+        font-size: 6rem;
+        font-weight: 400;
+        line-height: 8rem;
+        @include screen768 {
+            font-size: 4rem;
+        }
+    }
+
+    & h3 {
+        text-transform: uppercase;
+        font-weight: 300;
+        color: $red;
+        max-width: 500px;
+        @include screen768 {
+            font-size: 1.4rem;
+        }
+    }
+    & p {
+        max-width: 50rem;
+        padding: 2rem 0;
+        max-width: 500px;
+    }
+    a {
+        font-weight: 450;
+        transition: .3s;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
+.work01 {
+    & .work-img {
+        background-color: $red;
+    }
+    & .work-txt {
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 5rem;
+        opacity: 1;
+    }
+
+}
+
+.work02 {
+    & .work-img {
+        background-color: $black;
+    }
+    @include screen1300 {
+        flex-direction: column-reverse;
+    }
+}
+
+
+.work03 {
+    & .work-img {
+        background-color: $red;
+    }
+    & .work-txt {
+        align-items: flex-end;
+        text-align: right;
+        padding-right: 5rem;
+        opacity: 1;
+    }
+
+}
+
+.work04 {
+    & .work-img {
+        background-color: $black;
+    }
+    @include screen1300 {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+/* CODEPEN */
+.codepen {
+    position: relative;
+    min-height: 40vh;
+    padding: 10rem 0 20rem 0;
+    & svg {
+        height: 50vh;
+        padding: 3rem;
+        overflow: visible;
+        @include screen900 {
+            height: 30vh;
+        }
+        @include screen768 {
+           /*  height: 25vh; */
+            opacity: .8;
+        }
+        @include screen500 {
+            height: 28vh;
+            opacity: .4;
+        }
+        & #text-code-pen {
+            padding: 3rem;
+            transform-origin: center;
+            transform-box: fill-box;
+            animation: codepen .2s linear infinite alternate;
+        }
+    }
+    p {
+        position: absolute;
+        z-index: 10;
+        @include screen768 {
+            color: $red;
+        }
+    }
+    & a {
+        display: inline-block;
+    }
+    & img {
+        display: inline-block;
+      
+    }
+}
+
+
+
+@keyframes codepen {
+    0% { 
+    transform:rotate(-1deg); 
+    }
+    100% { 
+    transform:rotate(1deg); 
+    }
+} 

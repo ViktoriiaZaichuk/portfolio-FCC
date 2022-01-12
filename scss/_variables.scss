@@ -1,0 +1,102 @@
+/* FONTS */
+@font-face {
+    font-family: 'cyreneregular_advanced';
+    src: url("../../assets/fonts/cyreneregularadvanced.woff2") format('woff2'),
+         url("../../assets/fonts/cyreneregularadvanced.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+$displayFont: 'cyreneregular_advanced';
+$fontBodyText: 'Jost', sans-serif;
+
+/* COLORS */
+$red: #FC4D45;
+$black: #151413;
+$blackOpacity: #15141310;
+$grey: #F2F2F2;
+
+
+
+
+/* MIXINS RESPONSIVE */
+$bigScreen: 1550px;
+$screen1400: 1400px;
+$screen1300: 1300px;
+$screen1200: 1200px;
+$screen1100: 1100px;
+$screen1150: 1150px;
+$screen1024: 1024px;
+$screen900: 900px;
+$screen768: 768px;
+$screen500: 500px;
+$screen400: 400px;
+
+@mixin bigScreen {
+    @media (min-width: #{$bigScreen}) {
+      @content;
+    }
+}
+
+@mixin screen1400 {
+    @media (max-width: #{$screen1400}) {
+      @content;
+    }
+}
+
+@mixin screen1300 {
+    @media (max-width: #{$screen1300}) {
+      @content;
+    }
+}
+
+@mixin screen1200 {
+    @media (max-width: #{$screen1200}) {
+      @content;
+    }
+}
+
+
+@mixin screen1150 {
+  @media (max-width: #{$screen1150}) {
+    @content;
+  }
+}
+
+@mixin screen1100 {
+    @media (max-width: #{$screen1100}) {
+      @content;
+    }
+}
+
+@mixin screen1024 {
+    @media (max-width: #{$screen1024}) {
+      @content;
+    }
+}
+
+@mixin screen900 {
+  @media (max-width: #{$screen900}) {
+    @content;
+  }
+}
+
+
+@mixin screen768 {
+  @media (max-width: #{$screen768}) {
+    @content;
+  }
+}
+
+@mixin screen500 {
+  @media (max-width: #{$screen500}) {
+    @content;
+  }
+}
+
+@mixin screen400 {
+  @media (max-width: #{$screen400}) {
+    @content;
+  }
+}
